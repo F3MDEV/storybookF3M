@@ -1,6 +1,5 @@
 import F3MTopBar  from './F3mTopBar';
 
-import { ComponentMeta } from '@storybook/react';
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -10,9 +9,9 @@ import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import EditIcon from '@mui/icons-material/Edit';
 
 export default {
-  title: 'F3M Top Bar',
-  component: F3MTopBar,
-} as ComponentMeta<typeof F3MTopBar>;
+    component: F3MTopBar,
+    title: 'F3M Top Bar'
+};
 
 const Template = (args) => <F3MTopBar {...args} />;
 
@@ -21,7 +20,6 @@ export const Default = Template.bind({});
 Default.args = {
     barPosition: 'absolute',
     headerContainerClasses: 'w-100',
-    //summaryContent: (<div> Who Cares. </div> ),
     isHealthiPatientSummaryActive : false,
     healthiBadgePatientPhoto: (<span className={`badge rounded-pill bg-danger`} style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', zIndex: 1, bottom: -2, fontSize: '7px', textTransform: 'capitalize', width: '42px', maxHeight: '13px'}}>
         Inativo
